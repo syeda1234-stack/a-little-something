@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday, Wifey 🤍</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <audio id="background-music" loop>
+        <source src="song2.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- ================= Background ================= -->
+    <div class="stars"></div>
+
+    <!-- ================= Landing Page ================= -->
+    <section class="landing" id="landing">
+        <div class="container">
+            <h1 class="title">Happy Birthday</h1>
+            <h2 class="subtitle">Babeeee 🤍</h2>
+            <p class="start-text">Click anywhere to begin</p>
+        </div>
+    </section>
+
+    <!-- ================= Envelope ================= -->
+    <section class="envelope-screen hidden" id="envelope-screen">
+        <div class="envelope" id="envelope">
+            <div class="letter-preview"></div>
+            <div class="envelope-back"></div>
+            <div class="envelope-front"></div>
+            <div class="envelope-flap"></div>
+        </div>
+        <p class="envelope-text">Click the envelope 💌</p>
+    </section>
+
+    <!-- ================= Letter ================= -->
+    <section class="letter-screen hidden" id="letter-screen">
+        <div class="paper">
+            <h2>Happiest Birthday, Wifey 🤍</h2>
+            <p id="letter-text"></p>
+            <button id="continue-btn" class="hidden">
+                Continue Our Story →
+            </button>
+        </div>
+    </section>
+
+    <!-- ================= Memories ================= -->
+    <section class="memories-screen hidden" id="memories-screen">
+        <h1 class="memory-title">Tiny Pieces Of You 🌸</h1>
+
+        <div class="memory-grid">
+            <div class="memory-card">
+                🍌
+                <h3>Bananas</h3>
+                <p>You have permanently ruined bananas for me.</p>
+            </div>
+
+            <div class="memory-card">
+                🇪🇸
+                <h3>Spain</h3>
+                <p>I'm still waiting for you to return to Bangladesh.</p>
+            </div>
+
+            <div class="memory-card">
+                🤍
+                <h3>Pretty</h3>
+                <p>Dead drop gorgeous. That's literally your personality now.</p>
+            </div>
+
+            <div class="memory-card">
+                😂
+                <h3>MY Wife</h3>
+                <p>Kindly stop letting other people get close to MY wife.</p>
+            </div>
+
+            <div class="memory-card">
+                🌙
+                <h3>Home</h3>
+                <p>Somehow you'll always feel like home to me.</p>
+            </div>
+        </div>
+
+        <button id="song-page">One Last Thing 🎵</button>
+    </section>
+
+    <!-- ================= Song ================= -->
+    <section class="song-screen hidden" id="song-screen">
+        <h1>This Song Reminds Me Of You 🤍</h1>
+
+        <div class="vinyl">🎵</div>
+
+        <p>Every single time I hear this... I think of you.</p>
+
+        <audio id="dedication-music" controls>
+            <source src="song.mp3" type="audio/mpeg">
+        </audio>
+
+        <button id="ending-btn">Final Surprise ✨</button>
+    </section>
+
+    <!-- ================= Ending ================= -->
+    <section class="ending-screen hidden" id="ending-screen">
+        <h1>Happy Birthday, My Forever Wifey 🤍</h1>
+
+        <div class="final-picture">
+            <img src="image.jpeg" alt="Ma lobe">
+        </div>
+
+        <p>
+            No matter how many countries separate us...
+            you'll always be my favourite person.
+        </p>
+
+        <h2>SARANGHAEEEEE,babeee 💋💋.</h2>
+    </section>
+
+    <!-- ================= JavaScript ================= -->
+    <script src="script.js"></script>
+</body>
+
+</html>
