@@ -352,21 +352,19 @@ button:hover{
     margin-bottom:30px;
     text-align: center;
 }
-
 .memory-grid{
     width: 95%;
-    max-width: 1200px;
+    max-width: 1600px;
     display: flex;
-    justify-content: center;
-    gap: 15px;
+    justify-content: space-between;
+    gap: 25px;
 }
-
 .memory-card{
     flex: 1;
     min-width: 0;
     background:rgba(255,255,255,.08);
     backdrop-filter:blur(10px);
-    padding:20px 10px;
+    padding:35px 20px;
     border-radius:20px;
     text-align:center;
     transition:.4s;
