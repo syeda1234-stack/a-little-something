@@ -354,23 +354,24 @@ button:hover{
 }
 
 .memory-grid{
-    width:100%;
-    max-width:900px;
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-    gap:20px;
+    width: 95%;
+    max-width: 1200px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
 }
 
 .memory-card{
+    flex: 1;
+    min-width: 0;
     background:rgba(255,255,255,.08);
     backdrop-filter:blur(10px);
-    padding:20px;
+    padding:20px 10px;
     border-radius:20px;
     text-align:center;
     transition:.4s;
     font-size: 30px;
 }
-
 .memory-card:hover{
     transform:translateY(-6px);
     background:rgba(255,255,255,.14);
@@ -514,6 +515,7 @@ button:hover{
     }
 
     .memory-grid {
+        display: grid;
         grid-template-columns: 1fr;
         gap: 15px;
     }
