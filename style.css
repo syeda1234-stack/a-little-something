@@ -9,21 +9,15 @@
 }
 
 body{
-
     font-family:'Poppins',sans-serif;
-
     background:#111827;
-
-    overflow:hidden;
-
+    overflow-x:hidden;
+    overflow-y:auto;
     color:white;
-
     display:flex;
-
     justify-content:center;
-
     align-items:center;
-
+    min-height:100vh;
 }
 
 /* =========================
@@ -31,9 +25,7 @@ body{
 ========================= */
 
 .hidden{
-
-    display:none;
-
+    display:none !important;
 }
 
 /* =========================
@@ -41,19 +33,13 @@ body{
 ========================= */
 
 section{
-
     width:100%;
-
-    height:100vh;
-
+    min-height:100vh;
     display:flex;
-
     justify-content:center;
-
     align-items:center;
-
     flex-direction:column;
-
+    padding:20px 15px;
 }
 
 /* =========================
@@ -61,47 +47,29 @@ section{
 ========================= */
 
 .stars{
-
     position:fixed;
-
     width:100%;
-
     height:100%;
-
     top:0;
-
     left:0;
-
     pointer-events:none;
-
     background-image:
     radial-gradient(white 1px, transparent 1px),
     radial-gradient(white 1px, transparent 1px);
-
     background-size:70px 70px;
-
     background-position:0 0,35px 35px;
-
     opacity:.35;
-
     animation:moveStars 80s linear infinite;
-
+    z-index: 0;
 }
 
 @keyframes moveStars{
-
     from{
-
         transform:translateY(0);
-
     }
-
     to{
-
         transform:translateY(-600px);
-
     }
-
 }
 
 /* =========================
@@ -109,11 +77,8 @@ section{
 ========================= */
 
 .landing{
-
     position:relative;
-
     z-index:2;
-
 }
 
 /* =========================
@@ -121,25 +86,15 @@ section{
 ========================= */
 
 .container{
-
-    width:80%;
-
+    width:90%;
     max-width:700px;
-
     text-align:center;
-
-    padding:60px;
-
+    padding:40px 20px;
     border-radius:25px;
-
     background:rgba(255,255,255,.08);
-
     backdrop-filter:blur(12px);
-
     box-shadow:0 8px 35px rgba(0,0,0,.45);
-
     transition:.8s;
-
 }
 
 /* =========================
@@ -147,21 +102,14 @@ section{
 ========================= */
 
 .title{
-
     font-family:'Great Vibes',cursive;
-
-    font-size:90px;
-
+    font-size: clamp(50px, 10vw, 90px);
     color:white;
-
     text-shadow:
-
     0 0 10px white,
-
     0 0 20px #ffb6c1,
-
     0 0 40px hotpink;
-
+    line-height: 1.2;
 }
 
 /* =========================
@@ -169,15 +117,10 @@ section{
 ========================= */
 
 .subtitle{
-
     margin-top:15px;
-
     color:#ffc6dd;
-
-    font-size:36px;
-
+    font-size: clamp(24px, 5vw, 36px);
     font-weight:500;
-
 }
 
 /* =========================
@@ -185,35 +128,15 @@ section{
 ========================= */
 
 .start-text{
-
-    margin-top:45px;
-
-    font-size:22px;
-
+    margin-top:30px;
+    font-size: clamp(16px, 4vw, 22px);
     animation:blink 2s infinite;
-
 }
 
 @keyframes blink{
-
-    0%{
-
-        opacity:1;
-
-    }
-
-    50%{
-
-        opacity:.35;
-
-    }
-
-    100%{
-
-        opacity:1;
-
-    }
-
+    0%{ opacity:1; }
+    50%{ opacity:.35; }
+    100%{ opacity:1; }
 }
 
 /* =========================
@@ -221,52 +144,34 @@ section{
 ========================= */
 
 .fadeOut{
-
     animation:fadeOut .8s forwards;
-
 }
 
 @keyframes fadeOut{
-
     from{
-
         opacity:1;
-
         transform:scale(1);
-
     }
-
     to{
-
         opacity:0;
-
         transform:scale(.9);
-
     }
-
 }
+
 /* =========================
       ENVELOPE SCREEN
 ========================= */
 
 .envelope-screen{
-
     position:relative;
-
 }
 
 .envelope{
-
     position:relative;
-
-    width:320px;
-
-    height:220px;
-
+    width:280px;
+    height:190px;
     cursor:pointer;
-
     transition:.6s;
-
 }
 
 /* =========================
@@ -274,17 +179,11 @@ section{
 ========================= */
 
 .envelope-back{
-
     position:absolute;
-
     width:100%;
-
     height:100%;
-
     background:#ffcad4;
-
     border-radius:8px;
-
 }
 
 /* =========================
@@ -292,52 +191,30 @@ section{
 ========================= */
 
 .letter-preview{
-
     position:absolute;
-
     width:85%;
-
-    height:170px;
-
+    height:150px;
     background:#fffaf3;
-
     left:50%;
-
     transform:translateX(-50%);
-
     top:20px;
-
     border-radius:8px;
-
     z-index:1;
-
     transition:.8s;
-
 }
 
-/* decorative lines */
-
 .letter-preview::before{
-
     content:"";
-
     position:absolute;
-
     width:70%;
-
     height:4px;
-
     background:#ffd6e7;
-
     top:30px;
-
     left:15%;
-
     box-shadow:
     0 20px #ffd6e7,
     0 40px #ffd6e7,
     0 60px #ffd6e7;
-
 }
 
 /* =========================
@@ -345,21 +222,13 @@ section{
 ========================= */
 
 .envelope-front{
-
     position:absolute;
-
     bottom:0;
-
     width:100%;
-
-    height:110px;
-
+    height:100px;
     background:#f8b4c8;
-
     clip-path:polygon(0 0,50% 60%,100% 0,100% 100%,0 100%);
-
     z-index:3;
-
 }
 
 /* =========================
@@ -367,25 +236,15 @@ section{
 ========================= */
 
 .envelope-flap{
-
     position:absolute;
-
     top:0;
-
     width:100%;
-
-    height:120px;
-
+    height:100px;
     background:#f4a7bb;
-
     clip-path:polygon(0 0,100% 0,50% 100%);
-
     transform-origin:top;
-
     transition:1s;
-
     z-index:4;
-
 }
 
 /* =========================
@@ -393,13 +252,9 @@ section{
 ========================= */
 
 .envelope-text{
-
     margin-top:40px;
-
-    font-size:22px;
-
+    font-size: clamp(18px, 4vw, 22px);
     animation:blink 2s infinite;
-
 }
 
 /* =========================
@@ -407,91 +262,57 @@ section{
 ========================= */
 
 .envelope.open .envelope-flap{
-
     transform:rotateX(180deg);
-
 }
 
 .envelope.open .letter-preview{
-
-    transform:translate(-50%,-120px);
-
+    transform:translate(-50%,-100px);
 }
+
 /* =========================
       LETTER SCREEN
 ========================= */
 
 .letter-screen{
-
     position:relative;
-
 }
 
 .paper{
-
-    width:700px;
-
-    max-width:90%;
-
-    max-height:80vh;
-
+    width:100%;
+    max-width:700px;
+    max-height:75vh;
     overflow-y:auto;
-
     background:#fffaf3;
-
     border-radius:20px;
-
-    padding:45px;
-
+    padding:30px 20px;
     box-shadow:0 10px 40px rgba(0,0,0,.4);
-
     color:#333;
-
-    line-height:1.8;
-
+    line-height:1.7;
     animation:paperAppear .8s ease;
-
 }
+
 @keyframes paperAppear{
-
     from{
-
         transform:translateY(80px);
-
         opacity:0;
-
     }
-
     to{
-
         transform:translateY(0);
-
         opacity:1;
-
     }
-
 }
 
 .paper h2{
-
     text-align:center;
-
     color:#ff69b4;
-
-    margin-bottom:25px;
-
+    margin-bottom:20px;
     font-family:'Great Vibes',cursive;
-
-    font-size:55px;
-
+    font-size: clamp(38px, 8vw, 55px);
 }
 
 .paper p{
-
-    font-size:20px;
-
+    font-size: clamp(16px, 3.8vw, 20px);
     white-space:pre-line;
-
 }
 
 /* =========================
@@ -499,101 +320,71 @@ section{
 ========================= */
 
 button{
-
-    margin-top:35px;
-
-    padding:15px 35px;
-
+    margin-top:25px;
+    padding:12px 30px;
     border:none;
-
     border-radius:50px;
-
     background:#ff69b4;
-
     color:white;
-
-    font-size:18px;
-
+    font-size: clamp(15px, 3.5vw, 18px);
     cursor:pointer;
-
-   transition:all .4s ease;
-
+    transition:all .4s ease;
 }
 
 button:hover{
-
     transform:translateY(-4px);
-
     background:#ff4da6;
-
     box-shadow:0 10px 25px rgba(255,105,180,.45);
-
 }
 
 /* =========================
       MEMORY PAGE
 ========================= */
 
+.memories-screen{
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
 .memory-title{
-
     font-family:'Great Vibes',cursive;
-
-    font-size:70px;
-
-    margin-bottom:50px;
-
+    font-size: clamp(45px, 9vw, 70px);
+    margin-bottom:30px;
+    text-align: center;
 }
 
 .memory-grid{
-
-    width:90%;
-
+    width:100%;
+    max-width:900px;
     display:grid;
-
-    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-
-    gap:25px;
-
+    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+    gap:20px;
 }
 
 .memory-card{
-
     background:rgba(255,255,255,.08);
-
     backdrop-filter:blur(10px);
-
-    padding:30px;
-
+    padding:20px;
     border-radius:20px;
-
     text-align:center;
-
     transition:.4s;
-
+    font-size: 30px;
 }
 
 .memory-card:hover{
-
-    transform:translateY(-10px);
-
+    transform:translateY(-6px);
     background:rgba(255,255,255,.14);
-
 }
 
 .memory-card h3{
-
-    margin:20px 0;
-
+    margin:15px 0 10px 0;
     color:#ffd6e7;
-
+    font-size: 20px;
 }
 
 .memory-card p{
-
-    font-size:15px;
-
-    line-height:1.6;
-
+    font-size:14px;
+    line-height:1.5;
 }
 
 /* =========================
@@ -601,67 +392,42 @@ button:hover{
 ========================= */
 
 .song-screen{
-
     text-align:center;
-
 }
 
 .song-screen h1{
-
     font-family:'Great Vibes',cursive;
-
-    font-size:70px;
-
-    margin-bottom:40px;
-
+    font-size: clamp(45px, 9vw, 70px);
+    margin-bottom:25px;
 }
 
 .vinyl{
-
-    width:180px;
-
-    height:180px;
-
+    width: clamp(130px, 35vw, 180px);
+    height: clamp(130px, 35vw, 180px);
     border-radius:50%;
-
     background:black;
-
     display:flex;
-
     justify-content:center;
-
     align-items:center;
-
-    font-size:60px;
-
+    font-size: clamp(40px, 10vw, 60px);
     margin:auto;
-
     animation:spin 6s linear infinite;
-
 }
 
 @keyframes spin{
-
-    from{
-
-        transform:rotate(0deg);
-
-    }
-
-    to{
-
-        transform:rotate(360deg);
-
-    }
-
+    from{ transform:rotate(0deg); }
+    to{ transform:rotate(360deg); }
 }
 
 .song-screen p{
+    margin:25px 0;
+    font-size: clamp(16px, 4vw, 20px);
+}
 
-    margin:40px;
-
-    font-size:20px;
-
+#dedication-music {
+    width: 90%;
+    max-width: 320px;
+    margin: 10px auto;
 }
 
 /* =========================
@@ -669,101 +435,95 @@ button:hover{
 ========================= */
 
 .ending-screen{
-
     text-align:center;
-
     justify-content:center;
-
     align-items:center;
-
-    gap:25px;
-
+    gap:20px;
+    padding:40px 15px;
 }
 
 .ending-screen h1{
-
     font-family:'Great Vibes',cursive;
-
-    font-size:70px;
-
+    font-size: clamp(45px, 9vw, 70px);
     margin:0;
-
 }
 
 .final-picture{
-
-    width:280px;
-
-    height:280px;
-
+    width: clamp(200px, 60vw, 280px);
+    height: clamp(200px, 60vw, 280px);
     margin:0;
-
     border-radius:25px;
-
     overflow:hidden;
-
     border:4px solid rgba(255,255,255,.7);
-
     box-shadow:
     0 0 20px rgba(255,182,193,.5),
     0 10px 35px rgba(0,0,0,.4);
-
     animation:pictureAppear 1.5s ease;
-
 }
 
 .final-picture img{
-
     width:100%;
-
     height:100%;
-
     object-fit:cover;
-
     display:block;
-
 }
 
 .ending-screen p{
-
-    font-size:20px;
-
-    width:70%;
-
+    font-size: clamp(15px, 4vw, 20px);
+    width:90%;
     max-width:700px;
-
     line-height:1.6;
-
     margin:0;
-
 }
 
 .ending-screen h2{
-
     margin:0;
-
     color:#ffd6e7;
-
-    font-size:40px;
-
+    font-size: clamp(26px, 6vw, 40px);
 }
 
 @keyframes pictureAppear{
-
     from{
-
         opacity:0;
-
         transform:scale(.7);
-
     }
-
     to{
-
         opacity:1;
-
         transform:scale(1);
+    }
+}
 
+/* =========================
+      MOBILE OPTIMIZATIONS
+========================= */
+
+@media (max-width: 600px) {
+    section {
+        height: auto;
+        min-height: 100vh;
+        padding: 30px 15px;
     }
 
+    .container {
+        padding: 30px 15px;
+    }
+
+    .paper {
+        padding: 25px 15px;
+        max-height: 65vh;
+    }
+
+    .memory-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .envelope {
+        width: 240px;
+        height: 160px;
+    }
+
+    .letter-preview {
+        height: 120px;
+    }
 }
