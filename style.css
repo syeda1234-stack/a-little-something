@@ -1,0 +1,769 @@
+/* =========================
+        RESET
+========================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+
+    font-family:'Poppins',sans-serif;
+
+    background:#111827;
+
+    overflow:hidden;
+
+    color:white;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+/* =========================
+        HIDDEN
+========================= */
+
+.hidden{
+
+    display:none;
+
+}
+
+/* =========================
+      SCREEN SECTIONS
+========================= */
+
+section{
+
+    width:100%;
+
+    height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    flex-direction:column;
+
+}
+
+/* =========================
+      STAR BACKGROUND
+========================= */
+
+.stars{
+
+    position:fixed;
+
+    width:100%;
+
+    height:100%;
+
+    top:0;
+
+    left:0;
+
+    pointer-events:none;
+
+    background-image:
+    radial-gradient(white 1px, transparent 1px),
+    radial-gradient(white 1px, transparent 1px);
+
+    background-size:70px 70px;
+
+    background-position:0 0,35px 35px;
+
+    opacity:.35;
+
+    animation:moveStars 80s linear infinite;
+
+}
+
+@keyframes moveStars{
+
+    from{
+
+        transform:translateY(0);
+
+    }
+
+    to{
+
+        transform:translateY(-600px);
+
+    }
+
+}
+
+/* =========================
+      LANDING PAGE
+========================= */
+
+.landing{
+
+    position:relative;
+
+    z-index:2;
+
+}
+
+/* =========================
+      GLASS CARD
+========================= */
+
+.container{
+
+    width:80%;
+
+    max-width:700px;
+
+    text-align:center;
+
+    padding:60px;
+
+    border-radius:25px;
+
+    background:rgba(255,255,255,.08);
+
+    backdrop-filter:blur(12px);
+
+    box-shadow:0 8px 35px rgba(0,0,0,.45);
+
+    transition:.8s;
+
+}
+
+/* =========================
+        TITLE
+========================= */
+
+.title{
+
+    font-family:'Great Vibes',cursive;
+
+    font-size:90px;
+
+    color:white;
+
+    text-shadow:
+
+    0 0 10px white,
+
+    0 0 20px #ffb6c1,
+
+    0 0 40px hotpink;
+
+}
+
+/* =========================
+      SUBTITLE
+========================= */
+
+.subtitle{
+
+    margin-top:15px;
+
+    color:#ffc6dd;
+
+    font-size:36px;
+
+    font-weight:500;
+
+}
+
+/* =========================
+      START TEXT
+========================= */
+
+.start-text{
+
+    margin-top:45px;
+
+    font-size:22px;
+
+    animation:blink 2s infinite;
+
+}
+
+@keyframes blink{
+
+    0%{
+
+        opacity:1;
+
+    }
+
+    50%{
+
+        opacity:.35;
+
+    }
+
+    100%{
+
+        opacity:1;
+
+    }
+
+}
+
+/* =========================
+      FADE ANIMATION
+========================= */
+
+.fadeOut{
+
+    animation:fadeOut .8s forwards;
+
+}
+
+@keyframes fadeOut{
+
+    from{
+
+        opacity:1;
+
+        transform:scale(1);
+
+    }
+
+    to{
+
+        opacity:0;
+
+        transform:scale(.9);
+
+    }
+
+}
+/* =========================
+      ENVELOPE SCREEN
+========================= */
+
+.envelope-screen{
+
+    position:relative;
+
+}
+
+.envelope{
+
+    position:relative;
+
+    width:320px;
+
+    height:220px;
+
+    cursor:pointer;
+
+    transition:.6s;
+
+}
+
+/* =========================
+      ENVELOPE BACK
+========================= */
+
+.envelope-back{
+
+    position:absolute;
+
+    width:100%;
+
+    height:100%;
+
+    background:#ffcad4;
+
+    border-radius:8px;
+
+}
+
+/* =========================
+      LETTER PREVIEW
+========================= */
+
+.letter-preview{
+
+    position:absolute;
+
+    width:85%;
+
+    height:170px;
+
+    background:#fffaf3;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    top:20px;
+
+    border-radius:8px;
+
+    z-index:1;
+
+    transition:.8s;
+
+}
+
+/* decorative lines */
+
+.letter-preview::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:70%;
+
+    height:4px;
+
+    background:#ffd6e7;
+
+    top:30px;
+
+    left:15%;
+
+    box-shadow:
+    0 20px #ffd6e7,
+    0 40px #ffd6e7,
+    0 60px #ffd6e7;
+
+}
+
+/* =========================
+      FRONT OF ENVELOPE
+========================= */
+
+.envelope-front{
+
+    position:absolute;
+
+    bottom:0;
+
+    width:100%;
+
+    height:110px;
+
+    background:#f8b4c8;
+
+    clip-path:polygon(0 0,50% 60%,100% 0,100% 100%,0 100%);
+
+    z-index:3;
+
+}
+
+/* =========================
+      FLAP
+========================= */
+
+.envelope-flap{
+
+    position:absolute;
+
+    top:0;
+
+    width:100%;
+
+    height:120px;
+
+    background:#f4a7bb;
+
+    clip-path:polygon(0 0,100% 0,50% 100%);
+
+    transform-origin:top;
+
+    transition:1s;
+
+    z-index:4;
+
+}
+
+/* =========================
+      ENVELOPE TEXT
+========================= */
+
+.envelope-text{
+
+    margin-top:40px;
+
+    font-size:22px;
+
+    animation:blink 2s infinite;
+
+}
+
+/* =========================
+      OPEN ANIMATION
+========================= */
+
+.envelope.open .envelope-flap{
+
+    transform:rotateX(180deg);
+
+}
+
+.envelope.open .letter-preview{
+
+    transform:translate(-50%,-120px);
+
+}
+/* =========================
+      LETTER SCREEN
+========================= */
+
+.letter-screen{
+
+    position:relative;
+
+}
+
+.paper{
+
+    width:700px;
+
+    max-width:90%;
+
+    max-height:80vh;
+
+    overflow-y:auto;
+
+    background:#fffaf3;
+
+    border-radius:20px;
+
+    padding:45px;
+
+    box-shadow:0 10px 40px rgba(0,0,0,.4);
+
+    color:#333;
+
+    line-height:1.8;
+
+    animation:paperAppear .8s ease;
+
+}
+@keyframes paperAppear{
+
+    from{
+
+        transform:translateY(80px);
+
+        opacity:0;
+
+    }
+
+    to{
+
+        transform:translateY(0);
+
+        opacity:1;
+
+    }
+
+}
+
+.paper h2{
+
+    text-align:center;
+
+    color:#ff69b4;
+
+    margin-bottom:25px;
+
+    font-family:'Great Vibes',cursive;
+
+    font-size:55px;
+
+}
+
+.paper p{
+
+    font-size:20px;
+
+    white-space:pre-line;
+
+}
+
+/* =========================
+      BUTTONS
+========================= */
+
+button{
+
+    margin-top:35px;
+
+    padding:15px 35px;
+
+    border:none;
+
+    border-radius:50px;
+
+    background:#ff69b4;
+
+    color:white;
+
+    font-size:18px;
+
+    cursor:pointer;
+
+   transition:all .4s ease;
+
+}
+
+button:hover{
+
+    transform:translateY(-4px);
+
+    background:#ff4da6;
+
+    box-shadow:0 10px 25px rgba(255,105,180,.45);
+
+}
+
+/* =========================
+      MEMORY PAGE
+========================= */
+
+.memory-title{
+
+    font-family:'Great Vibes',cursive;
+
+    font-size:70px;
+
+    margin-bottom:50px;
+
+}
+
+.memory-grid{
+
+    width:90%;
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+
+    gap:25px;
+
+}
+
+.memory-card{
+
+    background:rgba(255,255,255,.08);
+
+    backdrop-filter:blur(10px);
+
+    padding:30px;
+
+    border-radius:20px;
+
+    text-align:center;
+
+    transition:.4s;
+
+}
+
+.memory-card:hover{
+
+    transform:translateY(-10px);
+
+    background:rgba(255,255,255,.14);
+
+}
+
+.memory-card h3{
+
+    margin:20px 0;
+
+    color:#ffd6e7;
+
+}
+
+.memory-card p{
+
+    font-size:15px;
+
+    line-height:1.6;
+
+}
+
+/* =========================
+      SONG PAGE
+========================= */
+
+.song-screen{
+
+    text-align:center;
+
+}
+
+.song-screen h1{
+
+    font-family:'Great Vibes',cursive;
+
+    font-size:70px;
+
+    margin-bottom:40px;
+
+}
+
+.vinyl{
+
+    width:180px;
+
+    height:180px;
+
+    border-radius:50%;
+
+    background:black;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:60px;
+
+    margin:auto;
+
+    animation:spin 6s linear infinite;
+
+}
+
+@keyframes spin{
+
+    from{
+
+        transform:rotate(0deg);
+
+    }
+
+    to{
+
+        transform:rotate(360deg);
+
+    }
+
+}
+
+.song-screen p{
+
+    margin:40px;
+
+    font-size:20px;
+
+}
+
+/* =========================
+      ENDING
+========================= */
+
+.ending-screen{
+
+    text-align:center;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:25px;
+
+}
+
+.ending-screen h1{
+
+    font-family:'Great Vibes',cursive;
+
+    font-size:70px;
+
+    margin:0;
+
+}
+
+.final-picture{
+
+    width:280px;
+
+    height:280px;
+
+    margin:0;
+
+    border-radius:25px;
+
+    overflow:hidden;
+
+    border:4px solid rgba(255,255,255,.7);
+
+    box-shadow:
+    0 0 20px rgba(255,182,193,.5),
+    0 10px 35px rgba(0,0,0,.4);
+
+    animation:pictureAppear 1.5s ease;
+
+}
+
+.final-picture img{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+    display:block;
+
+}
+
+.ending-screen p{
+
+    font-size:20px;
+
+    width:70%;
+
+    max-width:700px;
+
+    line-height:1.6;
+
+    margin:0;
+
+}
+
+.ending-screen h2{
+
+    margin:0;
+
+    color:#ffd6e7;
+
+    font-size:40px;
+
+}
+
+@keyframes pictureAppear{
+
+    from{
+
+        opacity:0;
+
+        transform:scale(.7);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:scale(1);
+
+    }
+
+}
