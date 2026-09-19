@@ -352,24 +352,25 @@ button:hover{
     margin-bottom:30px;
     text-align: center;
 }
+
 .memory-grid{
-    width: 95%;
-    max-width: 1600px;
-    display: flex;
-    justify-content: space-between;
-    gap: 25px;
+    width:100%;
+    max-width:900px;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+    gap:20px;
 }
+
 .memory-card{
-    flex: 1;
-    min-width: 0;
     background:rgba(255,255,255,.08);
     backdrop-filter:blur(10px);
-    padding:35px 20px;
+    padding:20px;
     border-radius:20px;
     text-align:center;
     transition:.4s;
     font-size: 30px;
 }
+
 .memory-card:hover{
     transform:translateY(-6px);
     background:rgba(255,255,255,.14);
@@ -513,7 +514,6 @@ button:hover{
     }
 
     .memory-grid {
-        display: grid;
         grid-template-columns: 1fr;
         gap: 15px;
     }
@@ -526,4 +526,70 @@ button:hover{
     .letter-preview {
         height: 120px;
     }
+
+}
+/* =========================
+      FLOWERS AROUND LETTER
+========================= */
+
+.letter-screen{
+    position:relative;
+    overflow:hidden;
+}
+
+.flower{
+    position:absolute;
+    font-size:35px;
+    opacity:.75;
+    animation:floatFlower 4s ease-in-out infinite;
+    pointer-events:none;
+}
+
+.flower1{
+    top:12%;
+    left:10%;
+}
+
+.flower2{
+    top:25%;
+    right:10%;
+    animation-delay:1s;
+}
+
+.flower3{
+    bottom:18%;
+    left:8%;
+    animation-delay:2s;
+}
+
+.flower4{
+    bottom:12%;
+    right:8%;
+    animation-delay:.5s;
+}
+
+.flower5{
+    top:8%;
+    right:25%;
+    font-size:25px;
+    animation-delay:1.5s;
+}
+
+.flower6{
+    bottom:25%;
+    right:20%;
+    font-size:25px;
+    animation-delay:2.5s;
+}
+
+@keyframes floatFlower{
+
+    0%,100%{
+        transform:translateY(0) rotate(0deg);
+    }
+
+    50%{
+        transform:translateY(-12px) rotate(8deg);
+    }
+
 }
