@@ -215,8 +215,6 @@ songPageBtn.addEventListener("click", function () {
     memoriesScreen.classList.add("hidden");
     songScreen.classList.remove("hidden");
 
-    backgroundMusic.pause();
-    backgroundMusic.currentTime = 0;
 
     // Add these two lines so the dedication song starts playing!
     dedicationMusic.volume = 0.8;
